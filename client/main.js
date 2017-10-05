@@ -22,12 +22,12 @@ var comment = agecomment(name2,age2);
 console.log(comment);
 
 Template.body.events({
-  "click input": function()
+  "click #submitmsg": function()
   {
     alert("Button Clicked!");
   },
-  "click textarea": function()
+  "click #mymsg": function()
   {
-    alert("HERE!")
+    alert("TYPE HERE!")
   }
 });
