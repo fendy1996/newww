@@ -20,3 +20,14 @@ var comment= agecomment(name1,age1);
 console.log(comment);
 var comment = agecomment(name2,age2);
 console.log(comment);
+
+Template.body.events({
+  "click input": function()
+  {
+    alert("Button Clicked!");
+  },
+  "click textarea": function()
+  {
+    alert("HERE!")
+  }
+});
