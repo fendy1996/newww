@@ -22,12 +22,44 @@ var comment = agecomment(name2,age2);
 console.log(comment);
 
 Template.body.events({
-  "click #submitmsg": function()
-  {
-    alert("Button Clicked!");
-  },
-  "click #mymsg": function()
-  {
-    alert("TYPE HERE!")
+  "click #submitmsg": function(event)
+  {event.preventDefault();
+    var formula ="67/7-150";
+    var results =eval(formula);
+    console.log (results);
+
+    var texts= "This is a string.";
+    var position = texts.indexOf("how much is?")
+    console.log(position);
+
+    var length = texts.length;
+    console.log(length);
+
+    var substring = texts.substring(0,17)
+    console.log(substring);
+    //var conversationbox = document.getElementById("conversationbox");
+
+    //var allMsgs = conversationbox.value;
+
+    //var newMsg = document.getElementById("newMsg");
+    //newMsg = "\nYou: "+ newMsg;
+
+    //allMsgs = allMsgs+ newMsg;
+
+    //conversationbox.value = allMsgs;
+
+    //var newElizaMsg = "\nEliza: what's up?"
+
+    //allMsgs = allMsgs+ newElizaMsg ;
+
+    //console.log(allMsgs);
+  //alert("Button Clicked!");
+
+    //console.log(newMsg);
+ },
+
+  "click #resetmsg": function(event)
+  {event.preventDefault();
+    //alert("Sure?")
   }
 });
