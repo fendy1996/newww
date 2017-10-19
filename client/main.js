@@ -1,3 +1,4 @@
+var msgRecords = new Mongo.Collection("msgRecords");
 
 var name1 ="Ray", age1 =18;
 var name2 ="Eve", age2 =26;
