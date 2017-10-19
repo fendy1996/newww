@@ -1,6 +1,22 @@
 var msgRecords = new Mongo.Collection("msgRecords");
 
-var name1 ="Ray", age1 =18;
+
+Template.body.events({
+  "click #submitmsg": function(event)
+  {event.preventDefault();
+    var msg = document.getElementById("myMsg").value;
+    Meteor.call("msgReceiver", msg);
+  },
+  "click #resetmsg": function(event){
+  {event.preventDefault();
+    Meteor.call("resetEliza")
+}
+}});
+
+
+
+
+/*var name1 ="Ray", age1 =18;
 var name2 ="Eve", age2 =26;
 
 var agecomment = function(name, age)
@@ -63,4 +79,4 @@ Template.body.events({
   {event.preventDefault();
     //alert("Sure?")
   }
-});
+}); */

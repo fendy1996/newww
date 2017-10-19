@@ -10,7 +10,6 @@ var msgRecords = new Mongo.Collection("msgRecords");
      multi: true
   }
 );*/
-
 /*var msgTime =new Date();
 //console.log(msgTime);//
 msgRecords.insert(
@@ -35,19 +34,36 @@ var allMsgs = msgRecords.find({});
 allMsgs = allMsgs.fetch();
 console.log(allMsgs);*/
 
-Metor.Meteor.methods({
-  methodName:function(){
-
-  }
+Meteor.methods(
+{
+  msgReceiver: function(msg) {
+    var msgTime = new Date();
+    msgRecords.insert(
+      {
+        speaker: "You",
+        msg: msg,
+        time: msgTime
+      }
+     );
+   var allMsgs = msgRecords.find({});
+   allMsgs = allMsgs.fetch();
+   console.log(allMsgs);
+   return;
+ },
+  resetEliza: function() {
+    msgRecords.remove({});
+    return;
+}
 });
 
 
 
 
 
-/*
 
-var allMsgs = msgRecords.findOne(
+
+
+/*var allMsgs = msgRecords.findOne(
   {
     speaker: "Fendy"
   }
