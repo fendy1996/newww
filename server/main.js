@@ -1,26 +1,18 @@
 var msgRecords = new Mongo.Collection("msgRecords");
 
-msgRecords.update(
-  {
+/*  {
     speaker: "Fendy"
   },
   {
     $set: {msg:"Hello World!"}
-  }
-);
-
-var allMsgs = msgRecords.find(
+  },
   {
-    speaker: "Fendy"
+     multi: true
   }
-);
-allMsgs = allMsgs.fetch();
-console.log(allMsgs);
+);*/
 
 /*var msgTime =new Date();
-console.log(msgTime);
-
-
+//console.log(msgTime);//
 msgRecords.insert(
   {
     speaker: "Fendy",
@@ -28,6 +20,32 @@ msgRecords.insert(
     time: msgTime
   }
 );
+
+msgRecords.insert(
+  {
+    speaker: "Mike",
+    msg:"hi!",
+    time: msgTime
+  }
+);
+
+
+
+var allMsgs = msgRecords.find({});
+allMsgs = allMsgs.fetch();
+console.log(allMsgs);*/
+
+Metor.Meteor.methods({
+  methodName:function(){
+
+  }
+});
+
+
+
+
+
+/*
 
 var allMsgs = msgRecords.findOne(
   {
